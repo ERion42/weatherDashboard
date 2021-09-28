@@ -1,24 +1,47 @@
 // City Array, used for selecting current city as well as setting history
 var searchedCities;
-
 searchedCities = [];
+const input = document.querySelector('input');
+
 
 document.addEventListener("load", restoreData());
-
-
-
 document.getElementById("submit").addEventListener("click", citySearch);
 
-const input = document.querySelector('input');
+function init() {
+  restoreData();
+  
+}
 
 function storeData() {
   localStorage.setItem("searchHistory", JSON.stringify(searchedCities));  
 }
 
 function restoreData() {
-  var searchedCities = JSON.parse(localStorage.getItem("searchHistory"));
-  document.querySelector(".cityID1").innerHTML = searchedCities[0];  
-  document.querySelector(".cityID2").innerHTML = searchedCities[1];
+  searchedCities = JSON.parse(localStorage.getItem("searchHistory"));
+  if (JSON.parse(localStorage.getItem("searchHistory"))[0] != null) {
+    document.querySelector(".cityID1").innerHTML =  JSON.parse(localStorage.getItem("searchHistory"))[0];  
+  }
+  if (JSON.parse(localStorage.getItem("searchHistory"))[1] != null) {
+    document.querySelector(".cityID1").innerHTML =  JSON.parse(localStorage.getItem("searchHistory"))[1];  
+  }
+  if (JSON.parse(localStorage.getItem("searchHistory"))[2] != null) {
+    document.querySelector(".cityID1").innerHTML =  JSON.parse(localStorage.getItem("searchHistory"))[2];  
+  }
+  if (JSON.parse(localStorage.getItem("searchHistory"))[3] != null) {
+    document.querySelector(".cityID1").innerHTML =  JSON.parse(localStorage.getItem("searchHistory"))[3];  
+  }
+  if (JSON.parse(localStorage.getItem("searchHistory"))[4] != null) {
+    document.querySelector(".cityID1").innerHTML =  JSON.parse(localStorage.getItem("searchHistory"))[4];  
+  }
+  if (JSON.parse(localStorage.getItem("searchHistory"))[5] != null) {
+    document.querySelector(".cityID1").innerHTML =  JSON.parse(localStorage.getItem("searchHistory"))[5];  
+  }
+  if (JSON.parse(localStorage.getItem("searchHistory"))[6] != null) {
+    document.querySelector(".cityID1").innerHTML =  JSON.parse(localStorage.getItem("searchHistory"))[6];  
+  }
+  if (JSON.parse(localStorage.getItem("searchHistory"))[7] != null) {
+    document.querySelector(".cityID1").innerHTML =  JSON.parse(localStorage.getItem("searchHistory"))[7];  
+  }
 }
 
 function citySearch() {
