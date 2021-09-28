@@ -2,7 +2,7 @@
 var searchedCities = [];
 var cityInput;
 var selected;
-var todayDate = moment();
+var nowDate = moment().format("ddd MMM Do, YYYY");
 const input = document.querySelector('input');
 
 
@@ -13,6 +13,7 @@ document.getElementById("submit").addEventListener("click", citySearch);
 
 function init() {
     // Restored Saved History and replaces search results
+    document.querySelector(".currentDate").innerHTML = nowDate;
     if (JSON.parse(localStorage.getItem("searchHistory")) != null) {
         restoreData();
         replaceCity();
