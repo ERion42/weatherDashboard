@@ -19,12 +19,12 @@
             <h1>Weather Dashboard</h1>
         </div>
         <div class="div2">
-            <p>City Forecast: <span class="currentCity">test</span></p>
+            <p>City Forecast: <span class="currentCity"></span></p>
             <ul>
-                <li>Temp: </li>
-                <li>Wind: </li>
-                <li>Humidity: </li>
-                <li>UV Index: </li>
+                <li>Temp: <span class="curCityTemp"></span></li>
+                <li>Wind: <span class="curCityWind"></span></li>
+                <li>Humidity: <span class="curCityHumid"></span></li>
+                <li>UV Index: <span class="curCityUV"></span></li>
             </ul>
         </div>
         <div class="div3">
@@ -32,7 +32,7 @@
         </div>
         <div class="div4">
             <p>Search for a City:</p>
-            <input id="search" placeholder="Search for..."></input>
+            <input id="search" placeholder="Search for..." onfocus="this.value=''"></input>
             <button value='send' id="submit">Search</button>
 
             <div id="alpha"></div>
@@ -41,14 +41,14 @@
         <div class="div5">
             <p>Search Results:</p>
             <ul>
-                <li><span class="cityID1 hist"></span></li>
-                <li><span class="cityID2 hist"></span></li>
-                <li><span class="cityID3 hist"></span></li>
-                <li><span class="cityID4 hist"></span></li>
-                <li><span class="cityID5 hist"></span></li>
-                <li><span class="cityID6 hist"></span></li>
-                <li><span class="cityID7 hist"></span></li>
-                <li><span class="cityID8 hist"></span></li>
+                <li><button class="button-solid cityID1 hist"></button></li>
+                <li><button class="button-solid cityID2 hist"></button></li>
+                <li><button class="button-solid cityID3 hist"></button></li>
+                <li><button class="button-solid cityID4 hist"></button></li>
+                <li><button class="button-solid cityID5 hist"></button></li>
+                <li><button class="button-solid cityID6 hist"></button></li>
+                <li><button class="button-solid cityID7 hist"></button></li>
+                <li><button class="button-solid cityID8 hist"></button></li>
             </ul>
         </div>
     </div>

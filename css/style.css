@@ -6,6 +6,10 @@ body {
     margin: 5px;
 }
 
+.button-solid {
+    border:none;
+}
+
 .parent {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
