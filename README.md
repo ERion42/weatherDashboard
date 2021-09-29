@@ -3,7 +3,7 @@
 Hello, Weather! is a streamlined weather dashboard. It gives the current weather, as well as a 5 day forecast of the chosen city. 
 
 ## Screenshots
-![Imgur](https://imgur.com/SZi2hJ0)
+![Imgur](https://i.imgur.com/SZi2hJ0.png)
 
 
 
