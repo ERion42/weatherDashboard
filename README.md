@@ -4,7 +4,7 @@ Hello, Weather! is a streamlined weather dashboard. It gives the current weather
 
 ## Screenshots
 
-### Start 
+
 
 
 ## Installation
