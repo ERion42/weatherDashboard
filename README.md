@@ -1,90 +1,38 @@
-# 06 Server-Side APIs: Weather Dashboard
+# Hello Weather!
 
-## Your Task
+Hello, Weather! is a streamlined weather dashboard. It gives the current weather, as well as a 5 day forecast of the chosen city. 
 
-Third-party APIs allow developers to access their data and functionality by making requests with specific parameters to a URL. Developers are often tasked with retrieving data from another application's API and using it in the context of their own. Your challenge is to build a weather dashboard that will run in the browser and feature dynamically updated HTML and CSS.
+## Screenshots
 
-Use the [OpenWeather One Call API](https://openweathermap.org/api/one-call-api) to retrieve weather data for cities. Read through the documentation for setup and usage instructions. You will use `localStorage` to store any persistent data. For more information on how to work with the OpenWeather API, refer to the [Full-Stack Blog on how to use API keys](https://coding-boot-camp.github.io/full-stack/apis/how-to-use-api-keys).
+### Start 
 
-## User Story
 
-```
-AS A traveler
-I WANT to see the weather outlook for multiple cities
-SO THAT I can plan a trip accordingly
-```
+## Installation
 
-## Acceptance Criteria
+This code just utilized HTML, CSS, and JavaScript. So long as the file structure remains intact it should run without problems.
 
-```
-GIVEN a weather dashboard with form inputs
-WHEN I search for a city
-THEN I am presented with current and future conditions for that city and that city is added to the search history
-WHEN I view current weather conditions for that city
-THEN I am presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, the wind speed, and the UV index
-WHEN I view the UV index
-THEN I am presented with a color that indicates whether the conditions are favorable, moderate, or severe
-WHEN I view future weather conditions for that city
-THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, the wind speed, and the humidity
-WHEN I click on a city in the search history
-THEN I am again presented with current and future conditions for that city
-```
 
-## Mock-Up
+## Usage
 
-The following image shows the web application's appearance and functionality:
+Simply input the city you want to search for in the "search cities" input and click "search". The interface will load the city, showing the current forecast as well as the forecast for the next five days. 
 
-![The weather app includes a search option, a list of cities, and a five-day forecast and current weather conditions for Atlanta.](./Assets/06-server-side-apis-homework-demo.png)
+It utilizes local storage so it will store up to 8 cities you've searched for. To recall a city you searched for recently, just click the button and the interface does the rest.
 
-## Grading Requirements
 
-This homework is graded based on the following criteria: 
+## Contributing
 
-### Technical Acceptance Criteria: 40%
+Same as usual- Any input it appreciated. Needlessly hurtful criticism will just be ignored (to the best of my ability.)
 
-* Satisfies all of the above acceptance criteria plus the following:
 
-    * Uses the OpenWeather API to retrieve weather data.
+## Current iteration
 
-    * Uses `localStorage` to store persistent data.
+0.1  The html, css, and Javascript seem to be functioning properly. This is the bare minimum I'd consider for the first iteration. 
 
-### Deployment: 32%
 
-* Application deployed at live URL.
+## Future Development Plans
 
-* Application loads with no errors.
+- Add a "Clear history" button
 
-* Application GitHub URL submitted.
+- Work on styling for buttons with no city attached
 
-* GitHub repository that contains application code.
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate.
-
-* Application user interface style is clean and polished.
-
-* Application resembles the mock-up functionality provided in the homework instructions.
-
-### Repository Quality: 13%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality readme file with description, screenshot, and link to deployed application.
-
-## Review
-
-You are required to submit BOTH of the following for review:
-
-* The URL of the functional, deployed application.
-
-* The URL of the GitHub repository. Give the repository a unique name and include a readme describing the project.
-
-- - -
-© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+- Add weather icons

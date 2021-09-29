@@ -84,43 +84,84 @@ function citySearch() {
 }
 
 function recallSavedCity1() {
-  var recalledCity = searchedCities[0];
-  replaceCity();
+    // Adds input to front of city array
+    searchedCities.unshift(searchedCities[0]);    
+    city = searchedCities[0];
+    queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=d7c0851cacad7b0e51e57b4c6714a41d";
+    openWeatherSearch();
+    document.querySelector(".currentCity").innerHTML = searchedCities[0];
+    replaceCity();
+    storeData();
 }
 function recallSavedCity2() {
-  selected = searchedCities[1];
-  console.log(selected);
-  replaceCity(selected);
+    // Adds input to front of city array
+    searchedCities.unshift(searchedCities[1]);    
+    city = searchedCities[1];
+    queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=d7c0851cacad7b0e51e57b4c6714a41d";
+    openWeatherSearch();
+    document.querySelector(".currentCity").innerHTML = searchedCities[1];
+    replaceCity();
+    storeData();
 }
 function recallSavedCity3() {
-  selected = searchedCities[2];
-  console.log(selected);
-  replaceCity(selected);  
+    // Adds input to front of city array
+    searchedCities.unshift(searchedCities[2]);    
+    city = searchedCities[2];
+    queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=d7c0851cacad7b0e51e57b4c6714a41d";
+    openWeatherSearch();
+    document.querySelector(".currentCity").innerHTML = searchedCities[2];
+    replaceCity();
+    storeData(); 
 }
 function recallSavedCity4() {
-  selected = searchedCities[3];
-  console.log(selected);
-  replaceCity(selected);  
+    // Adds input to front of city array
+    searchedCities.unshift(searchedCities[3]);    
+    city = searchedCities[3];
+    queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=d7c0851cacad7b0e51e57b4c6714a41d";
+    openWeatherSearch();
+    document.querySelector(".currentCity").innerHTML = searchedCities[3];
+    replaceCity();
+    storeData();  
 }
 function recallSavedCity5() {
-  selected = searchedCities[4];
-  console.log(selected);
-  replaceCity(selected);
+    // Adds input to front of city array
+    searchedCities.unshift(searchedCities[4]);    
+    city = searchedCities[4];
+    queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=d7c0851cacad7b0e51e57b4c6714a41d";
+    openWeatherSearch();
+    document.querySelector(".currentCity").innerHTML = searchedCities[4];
+    replaceCity();
+    storeData();
 }
 function recallSavedCity6() {
-  selected = searchedCities[5];
-  console.log(selected);
-  replaceCity(selected);
+    // Adds input to front of city array
+    searchedCities.unshift(searchedCities[5]);    
+    city = searchedCities[5];
+    queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=d7c0851cacad7b0e51e57b4c6714a41d";
+    openWeatherSearch();
+    document.querySelector(".currentCity").innerHTML = searchedCities[5];
+    replaceCity();
+    storeData();
 }
 function recallSavedCity7() {
-  selected = searchedCities[6];
-  console.log(selected);
-  replaceCity(selected);
+    // Adds input to front of city array
+    searchedCities.unshift(searchedCities[6]);    
+    city = searchedCities[6];
+    queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=d7c0851cacad7b0e51e57b4c6714a41d";
+    openWeatherSearch();
+    document.querySelector(".currentCity").innerHTML = searchedCities[6];
+    replaceCity();
+    storeData();
 }
 function recallSavedCity8() {
-  selected = searchedCities[7];
-  console.log(selected);
-  replaceCity(selected);
+    // Adds input to front of city array
+    searchedCities.unshift(searchedCities[7]);    
+    city = searchedCities[7];
+    queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=d7c0851cacad7b0e51e57b4c6714a41d";
+    openWeatherSearch();
+    document.querySelector(".currentCity").innerHTML = searchedCities[7];
+    replaceCity();
+    storeData();
 }
 
 // This is where the magic happens
