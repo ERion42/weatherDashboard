@@ -1,42 +1,38 @@
 /* Initial build is going to be light on CSS because I'm trying to get the programming side of things working
    I'll spruce up the CSS when I can */
+:root {
+    --darkest: #2c3531;
+    --dark: #116466;
+    --hilite1: #D9B08C;
+    --hilite2: #FFCB9A;
+    --lightest: #D1E8E2;
+}
+
+header {
+    background-color: var(--darkest);
+}
 
 body {
-    padding: 15px;
+    color: var(--darkest);
+    background-color: var(--lightest);
+}
+
+.futureForecast {
+    background-color: var(--darkest);
+    color: white;
+    padding: 5px;
     margin: 5px;
 }
 
-.button-solid {
-    border:none;
+.futureForecast h4 {
+    font-size: 1.25rem;
 }
 
-.parent {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    grid-column-gap: 5px;
-    grid-row-gap: 5px;
-    }
-    
-    .div1 { 
-        grid-area: 1 / 1 / 2 / 6; 
-        background-color: blue;
-        color: white;
-        border: 1px solid black;   
-    }
-    .div2 { 
-        grid-area: 2 / 2 / 4 / 6; 
-        border: 1px solid black;        
-    }
-    .div3 { 
-        grid-area: 4 / 2 / 6 / 6; 
-        border: 1px solid black;   
-    }
-    .div4 { 
-        grid-area: 2 / 1 / 3 / 2; 
-        border: 1px solid black;   
-    }
-    .div5 { 
-        grid-area: 3 / 1 / 6 / 2;
-        border: 1px solid black;   
-    }
+.currentForecast li {
+    list-style: none !important;
+    font-size: 1.25rem;
+}
+
+#sidebarMenu {
+    background: var(--lightest) !important;
+}

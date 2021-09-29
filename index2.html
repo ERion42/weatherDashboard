@@ -7,6 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
 
     <title>Hello, Weather!</title>
   </head>
@@ -33,28 +34,28 @@
             </h6>
             <ul class="nav flex-column mb-2">
               <li class="nav-item">
-                <li><button class="button-solid cityID1 hist w-100">-</button></li>
+                <li><button class="button-solid cityID1 hist w-100" id="cityID1">-</button></li>
               </li>
               <li class="nav-item">
-                <li><button class="button-solid cityID2 hist w-100">-</button></li>
+                <li><button class="button-solid cityID2 hist w-100" id="cityID2">-</button></li>
               </li>
               <li class="nav-item">
-                <li><button class="button-solid cityID3 hist w-100">-</button></li>
+                <li><button class="button-solid cityID3 hist w-100" id="cityID3">-</button></li>
               </li>
               <li class="nav-item">
-                <li><button class="button-solid cityID4 hist w-100">-</button></li>
+                <li><button class="button-solid cityID4 hist w-100" id="cityID4">-</button></li>
               </li>
               <li class="nav-item">
-                <li><button class="button-solid cityID5 hist w-100">-</button></li>
+                <li><button class="button-solid cityID5 hist w-100" id="cityID5">-</button></li>
               </li>
               <li class="nav-item">
-                <li><button class="button-solid cityID6 hist w-100">-</button></li>
+                <li><button class="button-solid cityID6 hist w-100" id="cityID6">-</button></li>
               </li>
               <li class="nav-item">
-                <li><button class="button-solid cityID7 hist w-100">-</button></li>
+                <li><button class="button-solid cityID7 hist w-100" id="cityID7">-</button></li>
               </li>
               <li class="nav-item">
-                <li><button class="button-solid cityID8 hist w-100">-</button></li>
+                <li><button class="button-solid cityID8 hist w-100" id="cityID8">-</button></li>
               </li>              
             </ul>
           </div>
@@ -64,7 +65,7 @@
           <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
             <h1 class="h2">Current Forecast For <span class="currentCity">Any City</span> (<span class="currentDate"></span>)</h1>
           </div>
-          <ul class="list-group">
+          <ul class="list-group currentForecast">
             <li>Temp: <span class="curCityTemp"></span></li>
             <li>Wind: <span class="curCityWind"></span></li>
             <li>Humidity: <span class="curCityHumid"></span></li>
@@ -78,11 +79,39 @@
 
     
           <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-            <h1 class="h2">1 Week Forecast</h1>
+            <h1 class="h2">5 Day Forecast</h1>
           </div>
-    
           <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-            
+            <div class="futureForecast dayPlus1">
+                <h3><span class="dayPlus1Date"> </span></h3>
+                <h4>Temp: <span class="dayPlus1Temp"> </span></h4>
+                <h4>Wind: <span class="dayPlus1Wind"> </span></h4>
+                <h4>Humidity: <span class="dayPlus1Humid"> </span></h4>
+            </div>        
+            <div class="futureForecast dayPlus2">
+                <h3><span class="dayPlus2Date"> </span></h3>
+                <h4>Temp: <span class="dayPlus2Temp"> </span></h4>
+                <h4>Wind: <span class="dayPlus2Wind"> </span></h4>
+                <h4>Humidity: <span class="dayPlus2Humid"> </span></h4>
+            </div> 
+            <div class="futureForecast dayPlus3">
+                <h3><span class="dayPlus3Date"> </span></h3>
+                <h4>Temp: <span class="dayPlus3Temp"> </span></h4>
+                <h4>Wind: <span class="dayPlus3Wind"> </span></h4>
+                <h4>Humidity: <span class="dayPlus3Humid"> </span></h4>
+            </div> 
+            <div class="futureForecast dayPlus4">
+                <h3><span class="dayPlus4Date"> </span></h3>
+                <h4>Temp: <span class="dayPlus4Temp"> </span></h4>
+                <h4>Wind: <span class="dayPlus4Wind"> </span></h4>
+                <h4>Humidity: <span class="dayPlus4Humid"> </span></h4>
+            </div> 
+            <div class="futureForecast dayPlus5">
+                <h3><span class="dayPlus5Date"> </span></h3>
+                <h4>Temp: <span class="dayPlus5Temp"> </span></h4>
+                <h4>Wind: <span class="dayPlus5Wind"> </span></h4>
+                <h4>Humidity: <span class="dayPlus5Humid"> </span></h4>
+            </div> 
           </div>
 
           

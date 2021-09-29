@@ -4,8 +4,14 @@ var cityInput;
 var selected;
 var city;
 var nowDate = moment().format("ddd MMM Do, YYYY");
+var now1Date = moment().add(1, 'days').format("MM/DD/YY");
+var now2Date = moment().add(2, 'days').format("MM/DD/YY");
+var now3Date = moment().add(3, 'days').format("MM/DD/YY");
+var now4Date = moment().add(4, 'days').format("MM/DD/YY");
+var now5Date = moment().add(5, 'days').format("MM/DD/YY");
 var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=d7c0851cacad7b0e51e57b4c6714a41d";
 const input = document.querySelector('input');
+
 
 
 // Functions established here:
@@ -24,6 +30,14 @@ document.querySelector(".cityID6").addEventListener("click", recallSavedCity6)
 document.querySelector(".cityID7").addEventListener("click", recallSavedCity7)
 document.querySelector(".cityID8").addEventListener("click", recallSavedCity8)
 
+// Make it easier to shrink down high-decimal numbers
+function precise(x) {
+  return Number.parseFloat(x).toPrecision(4);
+}
+function precise2(x) {
+  return Number.parseFloat(x).toPrecision(3);
+}
+
 
 function init() {
     // Restored Saved History and replaces search results
@@ -31,6 +45,7 @@ function init() {
     if (JSON.parse(localStorage.getItem("searchHistory")) != null) {
         restoreData();
         replaceCity();
+        dateReplace();
     }
 }
 
@@ -42,9 +57,22 @@ function restoreData() {
     searchedCities = JSON.parse(localStorage.getItem("searchHistory"));
 }
 
+function dateReplace() {
+  document.querySelector(".dayPlus1Date").innerHTML = now1Date;
+  document.querySelector(".dayPlus2Date").innerHTML = now2Date;
+  document.querySelector(".dayPlus3Date").innerHTML = now3Date;
+  document.querySelector(".dayPlus4Date").innerHTML = now4Date;
+  document.querySelector(".dayPlus5Date").innerHTML = now5Date;
+}
+
 function citySearch() {
     // Sets variable for input
     cityInput = input.value.toUpperCase();
+    // Checks for empty input
+    if (cityInput == '') {
+      alert("Please enter a city");
+      return;
+    }
     // Adds input to front of city array
     searchedCities.unshift(cityInput);    
     city = searchedCities[0];
@@ -52,6 +80,7 @@ function citySearch() {
     openWeatherSearch();
     replaceCity();
     storeData();
+    
 }
 
 function recallSavedCity1() {
@@ -94,6 +123,7 @@ function recallSavedCity8() {
   replaceCity(selected);
 }
 
+// This is where the magic happens
 function openWeatherSearch() {
   fetch(queryURL) 
     .then (function(response) {
@@ -103,8 +133,8 @@ function openWeatherSearch() {
          console.log(data);
          
          //Daily functions here .data(information)
-         var realTemp = ((data.main.temp-273.15)*1.8)+32
-         document.querySelector(".curCityTemp").innerHTML = realTemp  + "°";
+         var realTemp = precise(((data.main.temp-273.15)*1.8)+32)
+         document.querySelector(".curCityTemp").innerHTML = realTemp  + "°F";
          document.querySelector(".curCityWind").innerHTML = data.wind.speed + "mph";
          document.querySelector(".curCityHumid").innerHTML = data.main.humidity + "%";
          
@@ -121,9 +151,34 @@ function openWeatherSearch() {
           console.log(data);
       
             document.querySelector(".curCityUV").innerHTML = data.current.uvi;         
+            document.querySelector(".curCityWind").innerHTML = data.daily[0].wind_speed + "mph";
             //Five Day functions here .data(information) along with daily UV
-
-
+            var realTemp1Low = precise2(((data.daily[1].temp.min-273.15)*1.8)+32);
+            var realTemp1Hi = precise2(((data.daily[1].temp.max-273.15)*1.8)+32);
+            var realTemp2Low = precise2(((data.daily[2].temp.min-273.15)*1.8)+32);
+            var realTemp2Hi = precise2(((data.daily[2].temp.max-273.15)*1.8)+32);
+            var realTemp3Low = precise2(((data.daily[3].temp.min-273.15)*1.8)+32);
+            var realTemp3Hi = precise2(((data.daily[3].temp.max-273.15)*1.8)+32);
+            var realTemp4Low = precise2(((data.daily[4].temp.min-273.15)*1.8)+32);
+            var realTemp4Hi = precise2(((data.daily[4].temp.max-273.15)*1.8)+32);
+            var realTemp5Low = precise2(((data.daily[5].temp.min-273.15)*1.8)+32);
+            var realTemp5Hi = precise2(((data.daily[5].temp.max-273.15)*1.8)+32);
+            document.querySelector(".dayPlus1Temp").innerHTML = realTemp1Low + "/" + realTemp1Hi + "°F"
+            document.querySelector(".dayPlus1Wind").innerHTML = data.daily[1].wind_speed + "mph";
+            document.querySelector(".dayPlus1Humid").innerHTML = data.daily[1].humidity + "%";
+            document.querySelector(".dayPlus2Temp").innerHTML = realTemp1Low + "/" + realTemp1Hi + "°F"
+            document.querySelector(".dayPlus2Wind").innerHTML = data.daily[2].wind_speed + "mph";
+            document.querySelector(".dayPlus2Humid").innerHTML = data.daily[2].humidity + "%";
+            document.querySelector(".dayPlus3Temp").innerHTML = realTemp1Low + "/" + realTemp1Hi + "°F"
+            document.querySelector(".dayPlus3Wind").innerHTML = data.daily[3].wind_speed + "mph";
+            document.querySelector(".dayPlus3Humid").innerHTML = data.daily[3].humidity + "%";
+            document.querySelector(".dayPlus4Temp").innerHTML = realTemp1Low + "/" + realTemp1Hi + "°F"
+            document.querySelector(".dayPlus4Wind").innerHTML = data.daily[4].wind_speed + "mph";
+            document.querySelector(".dayPlus4Humid").innerHTML = data.daily[4].humidity + "%";
+            document.querySelector(".dayPlus5Temp").innerHTML = realTemp1Low + "/" + realTemp1Hi + "°F"
+            document.querySelector(".dayPlus5Wind").innerHTML = data.daily[5].wind_speed + "mph";
+            document.querySelector(".dayPlus5Humid").innerHTML = data.daily[5].humidity + "%";
+            
         })
 
       })  
@@ -162,8 +217,6 @@ function replaceCity() {
         searchedCities.pop();
       }    
 }
-
-// Functions called here:
 
 // call initialization function
 document.addEventListener("load", init());
