@@ -2,6 +2,8 @@
 
 Hello, Weather! is a streamlined weather dashboard. It gives the current weather, as well as a 5 day forecast of the chosen city. 
 
+This is a application that was developed for the Georgia Tech Full-stack Boot-camp I attended in 2021 as a way to practice the usage of APIs. 
+
 ## Screenshots
 ![Imgur](https://i.imgur.com/SZi2hJ0.png)
 
